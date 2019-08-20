@@ -7,7 +7,7 @@ import javax.swing.*;
         funcionario.setPercentualDeAcrecimo(Float.parseFloat(JOptionPane.showInputDialog("Por favor digite o  Fpercentual de acresimo do Funcionario: ")));
 
         String mensagem;
-        mensagem = "O funcionario " + funcionario.getNome() + " tem o salario bruto de " + funcionario.getSalarioBruto() + "/n porem apenas " + funcionario.getSalarioLiquido() + " de salario liquido";
+        mensagem = "O funcionario " + funcionario.getNome() + " tem o salario bruto de " + funcionario.getSalarioBruto() + "\n porem apenas " + funcionario.getSalarioLiquido() + " de salario liquido";
         JOptionPane.showMessageDialog(null, mensagem);
     }
 }
