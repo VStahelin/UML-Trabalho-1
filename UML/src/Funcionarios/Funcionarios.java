@@ -9,43 +9,12 @@ import javax.swing.*;
         String mensagem;
         mensagem = "O funcionario " + funcionario.getNome() + " tem o salario bruto de " + funcionario.getSalarioBruto() + "\n porem apenas " + funcionario.getSalarioLiquido() + " de salario liquido";
         JOptionPane.showMessageDialog(null, mensagem);
+
+        float valorTranferencia = 0;
+        
+        valorTranferencia = Float.parseFloat(JOptionPane.showInputDialog("Quanto deseja tranferir para essa conta:"));
+        funcionario.setSalarioBruto(funcionario.getSalarioBruto() + valorTranferencia);
+
+        JOptionPane.showMessageDialog(null, "Seu novo saldo é: " + String.valueOf(funcionario.getSalarioBruto()));
     }
-}
-
-class Funcionario{
-    private String nome;
-    private float salarioBruto;
-    private float percentualDeAcrecimo;
-
-    float getSalarioLiquido(){
-        float salarioLiquido = 0;
-        salarioLiquido = salarioBruto * (1 * percentualDeAcrecimo / 100);
-        return salarioLiquido;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public float getSalarioBruto() {
-        return salarioBruto;
-    }
-
-    public void setSalarioBruto(float salarioBruto) {
-        this.salarioBruto = salarioBruto;
-    }
-
-    public float getPercentualDeAcrecimo() {
-        return percentualDeAcrecimo;
-    }
-
-    public void setPercentualDeAcrecimo(float percentualDeAcrecimo) {
-        this.percentualDeAcrecimo = percentualDeAcrecimo;
-    }
-    
-
-}
+ }
